@@ -14,7 +14,7 @@ public class SquareEquation
         if ((Double.IsNaN(c)) || (Double.IsPositiveInfinity(c)) || (Double.IsNegativeInfinity(c)))
             throw new System.ArgumentException();
         double[] Ans = new double[0];
-        double d = (b * b) - (4.0 * a * c);
+        double d = b * b - (4.0 * a * c);
         if (-eps < d && d < eps)
         {
             Ans = new double[1];
