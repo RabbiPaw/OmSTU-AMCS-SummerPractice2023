@@ -23,7 +23,7 @@ public class SquareEquation
         if (d >= eps)
         {
             Ans = new double[2];
-            Ans[0] = -(b + Math.Sign(b) * Math.Sqrt(d)) / 2 + 0;
+            Ans[0] = -(b + Math.Sign(b) * Math.Sqrt(d)) / 2;
             Ans[1] = c / Ans[0];
         }
         return Ans;
