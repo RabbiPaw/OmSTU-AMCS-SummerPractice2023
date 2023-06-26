@@ -1,8 +1,8 @@
-name: square equation test
+name: unit-testing-using-dotnet-test
 
 on:
   push:
-    branches: ["square_equation"]
+    branches: ["unit-testing-using-dotnet-test"]
 
 jobs:
   build:
@@ -22,5 +22,9 @@ jobs:
       - name: Build
         run: dotnet build SquareEquationLib --no-restore /p:ContinuousIntegrationBuild=true
 
-      - name: Test
+      - name: Test1
         run: ./SquareEquationTest ./SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.dll
+      - name: Test2
+        run: dotnet test
+      - name: Coverlet
+        run: cd XUnit.Coverlet.MSBuild/ && dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura

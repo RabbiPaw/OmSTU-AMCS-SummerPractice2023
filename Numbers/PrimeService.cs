@@ -1,14 +1,20 @@
-﻿namespace System.Numbers
+﻿using System;
+namespace System.Numbers
 {
     public class PrimeService
     {
         public bool IsPrime(double a, double b, double c, double[] Answ)
         {
-            if (Answ.Count() == 1)
+            double Eps = Math.Pow(10,-9);
+            if (Answ.Count() ==0)
+            {
+                return false;
+            }
+            if (Answ.Count() == 1 & a*Answ[0]*Answ[0]+b*Answ[0]+c < Eps & a*Answ[0]*Answ[0]+b*Answ[0]+c > -Eps)
             {
                 return true;
             }
-            if (Answ.Count() == 2)
+            if (Answ.Count() == 2 & a*Answ[0]*Answ[0]+b*Answ[0]+c < Eps & a*Answ[0]*Answ[0]+b*Answ[0]+c > -Eps & a*Answ[1]*Answ[1]+b*Answ[1]+c < Eps & a*Answ[1]*Answ[1]+b*Answ[1]+c > -Eps)
             {
                 return true;
             }

@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace SquareEquationLib;
 
 public class SquareEquation
@@ -15,6 +14,9 @@ public class SquareEquation
             throw new System.ArgumentException();
         double[] Ans = new double[0];
         double d = ((b * b) - (4.0 * a * c));
+        if (d<-eps){
+            return Ans;
+        }
         if (-eps < d && d < eps)
         {
             Ans = new double[1];
