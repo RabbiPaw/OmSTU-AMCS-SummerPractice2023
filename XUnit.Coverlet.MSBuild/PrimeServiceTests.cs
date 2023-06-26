@@ -28,7 +28,7 @@ namespace XUnit.Coverlet
         #endregion
 
         [Theory]
-        [InlineData(1, 3, 2), InlineData(1, 3, 2.1249999999999999999), InlineData(1, 2, 1), InlineData(1, 2, 0)]
+        [InlineData(1, 3, 2), InlineData(1, 3, 2.124999999999999), InlineData(1, 2, 1), InlineData(1, 2, 0)]
         public void IsPrime_PrimesLessThan10_ReturnTrue(double a, double b, double c)
         {
             double[] Answ = SquareEquation.Solve(a, b, c);
