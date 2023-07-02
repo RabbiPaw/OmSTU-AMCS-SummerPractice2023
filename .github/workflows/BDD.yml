@@ -2,7 +2,7 @@ name: unit-testing-using-dotnet-test
 
 on:
   push:
-    branches: ["unit-testing-using-dotnet-test"]
+    branches: ["BDD"]
 
 jobs:
   build:
