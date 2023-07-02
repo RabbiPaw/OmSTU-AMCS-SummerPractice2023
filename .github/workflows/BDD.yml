@@ -1,4 +1,4 @@
-name: unit-testing-using-dotnet-test
+name: BDD
 
 on:
   push:
