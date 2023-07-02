@@ -27,4 +27,4 @@ jobs:
       - name: Test2
         run: dotnet test
       - name: Coverlet
-        run: cd XUnit.Coverlet.MSBuild/ && dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
+        run: cd BDD.Tests && dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura

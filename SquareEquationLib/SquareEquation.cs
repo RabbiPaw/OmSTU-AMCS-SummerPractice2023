@@ -5,7 +5,7 @@ public class SquareEquation
 {
     public static double[] Solve(double a, double b, double c)
     {
-        double eps = Math.Pow(10, -9);
+        double eps = 1e-6;
         if ((Math.Abs(a) < eps) || (Double.IsNaN(a)) || (Double.IsPositiveInfinity(a)) || (Double.IsNegativeInfinity(a)))
             throw new System.ArgumentException();
         if ((Double.IsNaN(b)) || (Double.IsPositiveInfinity(b)) || (Double.IsNegativeInfinity(b)))
@@ -24,9 +24,15 @@ public class SquareEquation
         }
         if (d >= eps)
         {
+            if (-eps<b && b<eps){
+                Ans = new double[2];
+                Ans[0] = Math.Sqrt(d)/(2*a);
+                Ans[1] = -Math.Sqrt(d)/(2*a);
+            }
+            else{
             Ans = new double[2];
             Ans[0] = -(b + Math.Sign(b) * Math.Sqrt(d)) / 2;
-            Ans[1] = c / Ans[0];
+            Ans[1] = c / Ans[0];}
         }
         return Ans;
     }
