@@ -1,4 +1,4 @@
-using System.Numbers;
+using System.Square;
 using SquareEquationLib;
 using Xunit;
 
@@ -6,9 +6,9 @@ namespace XUnit.Coverlet
 {
     public class PrimeServiceTests
     {
-        readonly PrimeService _primeService;
+        readonly SquareService _squareService;
 
-        public PrimeServiceTests() => _primeService = new PrimeService();
+        public SquareServiceTests() => _squareService = new SquareService();
 
         #region Sample_TestCode
         [Theory]
@@ -32,7 +32,7 @@ namespace XUnit.Coverlet
         public void OneAndTwoXTest(double a, double b, double c)
         {
             double[] Answ = SquareEquation.Solve(a, b, c);
-            var result = _primeService.IsPrime(a, b, c, Answ);
+            var result = _squareService.IsPrime(a, b, c, Answ);
             Assert.True(result);
         }
 
@@ -41,7 +41,7 @@ namespace XUnit.Coverlet
         public void NoXTest(double a, double b, double c)
         {
             double[] Answ = SquareEquation.Solve(a, b, c);
-            var result = _primeService.IsPrime(a, b, c, Answ);
+            var result = _squareService.IsPrime(a, b, c, Answ);
             Assert.False(result);
         }
     }
