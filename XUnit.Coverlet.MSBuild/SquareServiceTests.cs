@@ -4,7 +4,7 @@ using Xunit;
 
 namespace XUnit.Coverlet
 {
-    public class PrimeServiceTests
+    public class SquareServiceTests
     {
         readonly SquareService _squareService;
 
