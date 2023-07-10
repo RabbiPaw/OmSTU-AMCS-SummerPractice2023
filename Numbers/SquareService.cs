@@ -3,7 +3,7 @@ namespace System.Square
 {
     public class SquareService
     {
-        public bool IsPrime(double a, double b, double c, double[] Answ)
+        public bool SquareMath(double a, double b, double c, double[] Answ)
         {
             double Eps = Math.Pow(10,-9);
             if (Answ.Count() ==0)
