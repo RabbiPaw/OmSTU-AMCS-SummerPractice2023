@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Numbers\Numbers.csproj" />
+    <ProjectReference Include="..\Square\Square.csproj" />
     <ProjectReference Include="..\SquareEquationLib\SquareEquationLib.csproj" />
   </ItemGroup>
 
