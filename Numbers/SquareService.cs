@@ -1,7 +1,7 @@
 ﻿using System;
-namespace System.Numbers
+namespace System.Square
 {
-    public class PrimeService
+    public class SquareService
     {
         public bool IsPrime(double a, double b, double c, double[] Answ)
         {
